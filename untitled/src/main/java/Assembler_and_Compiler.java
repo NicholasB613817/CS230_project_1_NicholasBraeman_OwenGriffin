@@ -1,12 +1,14 @@
 import java.util.Scanner;
-
 public class Assembler_and_Compiler {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
     public static void Assembler() {
         Scanner user_Input = new Scanner(System.in);
         user_Input.nextLine();
-        int x = user_Input.nextInt();
+        //if/then statements for 0 - F binary values
         if (user_Input.nextInt() == 0) {
-            System.out.println("0x0000");
+            System.out.println("0000");
         } else if (user_Input.nextInt() == 1) {
             System.out.println("0001");
         }else if (user_Input.nextInt() == 2) {
@@ -25,22 +27,25 @@ public class Assembler_and_Compiler {
             System.out.println("1000");
         }else if (user_Input.nextInt() == 9) {
             System.out.println("1001");
-        }else if (user_Input.nextInt() == 10) {
+        }else if (user_Input.nextLine() == "A") {
             System.out.println("1010");
-        }else if (user_Input.nextInt() == 11) {
+        }else if (user_Input.nextLine() == "B") {
             System.out.println("1011");
-        }else if (user_Input.nextInt() == 12) {
+        }else if (user_Input.nextLine() == "C") {
             System.out.println("1100");
-        }else if (user_Input.nextInt() == 13) {
+        }else if (user_Input.nextLine() == "D") {
             System.out.println("1101");
-        }else if (user_Input.nextInt() == 14) {
+        }else if (user_Input.nextLine() == "E") {
             System.out.println("1110");
-        }else if (user_Input.nextInt() == 15) {
+        }else if (user_Input.nextLine() == "F") {
             System.out.println("1111");
+        }
+        //if/then statements for A - Z hexadecimal values
+        if (user_Input.nextLine().equals("A")) {
+            System.out.println(6 + 5);
         }
     }
     public static void compiler() {
-
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
         if (x == 9) {
