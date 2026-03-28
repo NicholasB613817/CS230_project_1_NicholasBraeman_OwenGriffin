@@ -22,5 +22,20 @@ public class Compiler {
         }else(){
             System.out.println(input + input);
         }
-    }*/
+    }
+
+    LDBA 0x0048
+    STBA 0xFC16
+    LDBA 0x0065
+    STBA 0xFC16
+    LDBA 0x0069
+    STBA 0xFC16
+    LDBA 0x0069
+    STBA 0xFC16
+    LDBA 0x006F
+    STBA 0xFC16
+    LDBA 0x0021
+    STBA 0xFC16
+
+    */
 }
