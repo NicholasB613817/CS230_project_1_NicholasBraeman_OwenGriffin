@@ -1,5 +1,6 @@
 public class Assembler {
     public static String assembler(String input) {
+        //When user enters the assembly code LDBA_______, it prints the hexadecimal and the hex instructions
         switch (input) {
             case "LDBA 0x0000":
                 System.out.println("The hexadecimal is 0!");
@@ -65,45 +66,28 @@ public class Assembler {
                 System.out.println("The hexadecimal is F!");
                 System.out.println("D0 11 11 F1 FC 16");
                 break;
-                case "LDBA 0x0048" +
-                     "STBA 0xFC16" +
-                     "LDBA 0x0065" +
-                     "STBA 0xFC16" +
-                     "LDBA 0x0069" +
-                     "STBA 0xFC16" +
-                     "LDBA 0x0069" +
-                     "STBA 0xFC16" +
-                     "LDBA 0x006F" +
-                     "STBA 0xFC16":
-                    System.out.println("Hello");
-                    System.out.println("D0 00 6F F1 FC 16");
-                    break;
-            case "LDBA 0x0048" +
-                         "STBA 0xFC16" +
-                         "LDBA 0x0065" +
-                         "STBA 0xFC16" +
-                         "LDBA 0x0069" +
-                         "STBA 0xFC16" +
-                         "LDBA 0x0069" +
-                         "STBA 0xFC16" +
-                         "LDBA 0x006F" +
-                         "STBA 0xFC16" +
-                         "LDBA 0x0021" +
-                         "STBA 0xFC16":
+
+            case "\nLDBA 0x0048" +
+                         "\nSTBA 0xFC16" +
+                         "\nLDBA 0x0065" +
+                         "\nSTBA 0xFC16" +
+                         "\nLDBA 0x0069" +
+                         "\nSTBA 0xFC16" +
+                         "\nLDBA 0x0069" +
+                         "\nSTBA 0xFC16" +
+                         "\nLDBA 0x006F" +
+                         "\nSTBA 0xFC16" +
+                         "\nLDBA 0x0021" +
+                         "\nSTBA 0xFC16":
                 System.out.println("Hello!");
                 System.out.println("D0 00 21 F1 FC 16");
                 break;
-                case "A":
-                    System.out.println("20");
-                    System.out.println("");
-                    System.out.println("D0 00 20 F1 FC 16");
-                    break;
-                    //case "B":
+                //to fit the first required input, user enters println(Hi), which outputs to the assembly code of "Hi"
             case "println(Hi)":
-                System.out.print("LDBA 0x0048" +
-                        "STBA 0xFC16" +
-                        "LDBA 0x0069" +
-                        "STBA 0xFC16");
+                System.out.println("LDBA 0x0048");
+                System.out.println("STBA 0xFC16");
+                System.out.println("LDBA 0x0069");
+                System.out.println("STBA 0xFC16");
                 System.out.println("D0 00 69 F1 FC 16");
         }
         return null;

@@ -1,41 +1,27 @@
 import java.util.Scanner;
 
 public class Compiler {
-    /*public static void compiler(String input) {
-        Scanner scan = new Scanner(System.in);
-        String ADDA;
-        //String SUBA;
-        input = Assembler.assembler(scan.nextLine());
-        String input2;
-        input2 = Assembler.assembler(scan.nextLine());
-        switch (input) {
-            case "+":
-                ADDA = input + input2;
-                System.out.println(ADDA);
-                break;
-            case "-":
-                SUBA = input - input;
-                System.out.println(SUBA);
-        }*/
-        /*if (input == null) {
-            System.out.println("Please enter a valid input!");
-        }else(){
-            System.out.println(input + input);
-        }
+    public static void compiler() {
+        //scanner to grab user input
+        Scanner input = new Scanner(System.in);
+
+        //getting user's input
+        System.out.println("Enter a number!");
+        int input1 = input.nextInt();
+        System.out.println("Enter a second number!");
+        int input2 = input.nextInt();
+
+        //adding both user inputs
+        int result = input1 + input2;
+
+        //format of assembly code
+        System.out.println("LDWA     " + input1 + ", i"
+                + "\nADDA     " + input2 + ", i" +
+                "\nSTWA     result, d" +
+                "\nSTOP" +
+                "\nresult:     .WORD     0" +
+                "\n.END");
+        //adding the result for the user
+        System.out.println("Result = " + result);
     }
-
-    LDBA 0x0048
-    STBA 0xFC16
-    LDBA 0x0065
-    STBA 0xFC16
-    LDBA 0x0069
-    STBA 0xFC16
-    LDBA 0x0069
-    STBA 0xFC16
-    LDBA 0x006F
-    STBA 0xFC16
-    LDBA 0x0021
-    STBA 0xFC16
-
-    */
 }
